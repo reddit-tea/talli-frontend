@@ -1,5 +1,5 @@
 # talli-frontend
-
+![](https://github.com/reddit-tea/talli-frontend/workflows/build/badge.svg)
 ## Project setup
 ```
 npm install
