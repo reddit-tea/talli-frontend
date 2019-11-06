@@ -16,20 +16,19 @@
             <v-list-item-content>
               <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item-content>
-
         </v-list-item>
       </v-list>
 
       <template v-slot:append>
         <div class="pa-2">
-          <v-btn block>Logout</v-btn>
+          <v-btn color="primary" block>Logout</v-btn>
         </div>
       </template>
     </v-navigation-drawer>
 
     <v-app-bar
       app
-      color="green"
+      color="primary"
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
@@ -40,13 +39,19 @@
     </v-app-bar>
 
     <v-content>
-      <router-view/>
+      <v-layout row wrap>
+        <div class="sidebar"></div>
+        <v-flex class="main">
+          <router-view/>
+        </v-flex>
+        <div class="sidebar"></div>
+      </v-layout>
     </v-content>
     <v-footer
-      color="green"
+      color="primary"
       app
     >
-      <span class="white--text">made by /r/tea contributors &copy; 2019</span>
+      <span class="white--text">made by <a class="white--text" href="https://github.com/reddit-tea/">/r/tea contributors</a> &copy; 2019</span>
     </v-footer>
   </v-app>
 </template>
@@ -57,11 +62,21 @@ export default {
     return {
       drawer: false,
       items: [
-        { title: 'Dashboard', icon: 'mdi-home', link: '/' },
-        { title: 'Account', icon: 'mdi-account-box', link: 'about' },
-        { title: 'Admin', icon: 'mdi-gavel', link: 'nothing' }
+        { title: 'Home', icon: 'mdi-home', link: '/' },
+        { title: 'Vote', icon: 'mdi-vote', link: 'vote' },
+        { title: 'Admin', icon: 'mdi-gavel', link: 'about' }
       ]
     }
   }
 }
 </script>
+
+<style scoped>
+  .sidebar {
+    width: 15%;
+  }
+
+  .main {
+    width: auto;
+  }
+</style>

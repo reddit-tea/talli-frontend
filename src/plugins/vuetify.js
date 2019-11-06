@@ -4,6 +4,16 @@ import Vuetify from 'vuetify/lib'
 Vue.use(Vuetify)
 
 export default new Vuetify({
+  theme: {
+    themes: {
+      light: {
+        primary: '#9f45af',
+        secondary: '#b15078',
+        accent: '#b15078',
+        error: '#b71c1c'
+      }
+    }
+  },
   icons: {
     iconfont: 'mdi'
   }
