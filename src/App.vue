@@ -40,18 +40,20 @@
 
     <v-content>
       <v-layout row wrap>
-        <div class="sidebar"></div>
+        <v-spacer></v-spacer>
         <v-flex class="main">
           <router-view/>
         </v-flex>
-        <div class="sidebar"></div>
+        <v-spacer></v-spacer>
       </v-layout>
     </v-content>
     <v-footer
       color="primary"
       app
     >
-      <span class="white--text">made by <a class="white--text" href="https://github.com/reddit-tea/">/r/tea contributors</a> &copy; 2019</span>
+      <v-spacer></v-spacer>
+      <span class="white--text overline">made by <a class="white--text" href="https://github.com/reddit-tea/">/r/tea contributors</a> &copy; 2019</span>
+      <v-spacer></v-spacer>
     </v-footer>
   </v-app>
 </template>
@@ -72,11 +74,8 @@ export default {
 </script>
 
 <style scoped>
-  .sidebar {
-    width: 15%;
-  }
-
   .main {
-    width: auto;
+    width: 70%;
+    max-width: 1000px;
   }
 </style>
