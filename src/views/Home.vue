@@ -1,7 +1,9 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-  </div>
+  <v-card fill-height>
+    <v-card-text>
+      <img alt="Vue logo" src="../assets/logo.png">
+    </v-card-text>
+  </v-card>
 </template>
 
 <script>
