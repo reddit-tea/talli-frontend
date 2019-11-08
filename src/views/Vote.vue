@@ -74,7 +74,6 @@ export default {
       return vendors
     },
     unselectedVendors: function () {
-      console.log(this.selectedVendors)
       let filter = this.selectedVendors
       return this.allVendors.filter(function (value) {
         return !filter.includes(value)
@@ -89,9 +88,6 @@ export default {
       for (let name of this.votes.values()) {
         this.selectedVendors.push(name)
       }
-      console.log(this.votes)
-      console.log(this.voteCount)
-      console.log(this.selectedVendors)
     },
     addRunnerUp: function () {
       if (this.runnerUpCount < 10) {
